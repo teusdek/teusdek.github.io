@@ -1,0 +1,138 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.top
+{
+    width: 100%;
+    height: 50px;
+}
+.topint
+{
+    margin-top: 2px;
+    height: 48px;
+    background-color: rgba(44, 40, 66, 0.863);
+}
+.topleft
+{
+    width: 20%;
+    height: 48px;
+    float: left;
+}
+.topright
+{
+    width: 80%;
+    right: 48px;
+    float: right;
+    
+}
+.topleft ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topright ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topleft li
+{
+    color:white;
+    text-decoration: none;
+}
+.topright li a
+{
+    color: white;
+    text-decoration: none;
+    float: left;
+    height: 48px;
+    line-height: 47px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.topleft img
+{
+    margin-top: 1px;
+    border: 2px solid #ccc;
+    border-radius: 38px;
+}
+#nomeperfil
+{
+   color:  #ccc;
+}
+.menumobile
+{
+    display: none;
+}
+@media (max-width: 575.98px) 
+{
+.topleft
+{
+    width: 50%;
+    height: 48px;
+    float: left;
+}
+.topright
+{
+    width: 50%;
+    right: 48px;
+    float: right;
+    
+}
+.topright li a
+{
+    float: none;
+     color: white;;
+    text-decoration: none;
+    height: 48px;
+}
+.topright ul
+{
+    display: none;
+    z-index: 10;
+    background-color: rgba(44, 40, 66, 0.863);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+}
+.menumobile
+{
+     color: white;
+    display: block;
+}
+}
+@media (min-width: 576px) and (max-width: 767.98px) 
+{ 
+    .topleft
+{
+    width: 20%;
+    height: 48px;
+    float: left;
+}
+.topright
+{
+    width: 80%;
+    right: 48px;
+    float: right;
+    
+}
+.topright li a
+{
+    color: white;
+    text-decoration: none;
+    float: left;
+    height: 48px;
+    line-height: 47px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+#menu
+{
+    display: block !important;
+}
+}

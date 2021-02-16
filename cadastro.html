@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/stylecadastro.css">
+    <script src="javascript/jquery-3.4.1.js"></script>
+    <script src="javascript/jquery.mask.js"></script>
+    <title>Folha De Cadastro</title>
+</head>
+
+<body>
+    <div class="box">
+        <form method="POST" autocomplete="off" onsubmit="return validar()">
+            <div class="form-row">
+                <div class="col">
+                    <label>Nome Completo</label>
+                    <input type="text" class="form-control" id="inputnome" placeholder="Nome completo" required>
+                </div>
+                <div class="col">
+                    <label>Apelido</label>
+                    <input type="text" class="form-control" id="inputapelido" placeholder="Apelido" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 conteudoleft">
+                    <label for="formGroupExampleInput">CPF</label>
+                    <input type="text" class="form-control" id="inputcpf" placeholder="000.000.000-00" maxlength="14"
+                        required>
+                </div>
+                <div class="form-check form-check-inline conteudocheck">
+                    <input class="form-check-input" name="checksex" type="radio" id="checkhomen" value="opcao1" checked>
+                    <label class="form-check-label" for="inlineCheckbox1">Homen</label>
+                </div>
+                <div class="form-check form-check-inline conteudocheck">
+                    <input class="form-check-input" name="checksex" type="radio" id="checkmulher" value="opcao2">
+                    <label class="form-check-label" for="inlineCheckbox2">Mulher</label>
+                </div>
+                <div class="form-group conteudodata">
+                    <label for="formGroupExampleInput">Data Nascimeto</label>
+                    <input type="date" class="form-control" id="inputdata" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputemail" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Telefone</label>
+                    <input type="text" class="form-control" id="inputtelefone" maxlength="13"
+                        placeholder="(00)0000-0000">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Celular</label>
+                    <input type="text" class="form-control" id="inputcelular" maxlength="15" placeholder="(00)00000000"
+                        required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Usuário</label>
+                    <input type="text" class="form-control" id="inputusuario" placeholder="Usuário" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Senha</label>
+                    <input type="password" class="form-control" id="inputsenha" placeholder="Senha" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Endereço</label>
+                <input type="text" class="form-control" id="inputrua" placeholder="Rua dos Bobos, nº 0" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Cidade</label>
+                    <input type="text" class="form-control" id="inputcidade" placeholder="Gotham City" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputEstado">Estado</label>
+                    <select id="inputestado" class="form-control">
+                        <option selected disabled>Escolher...</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputCEP">CEP</label>
+                    <input type="text" class="form-control" id="inputcep" placeholder="00000-000" maxlength="9">
+                </div>
+            </div>
+            <button value="enviar" type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+    <script src="javascript/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
